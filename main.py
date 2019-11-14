@@ -1,15 +1,16 @@
 from os import system
 from util import red
 
-print(red("1"), "-", red("Output using print"))
-print(red("2"), "-", red("Simple Math using Pre-determined Integers and Variables"))
-print(red("3"), "-", red("Simple Math using Input() and Variables\n"))
+remixes = ["Output using print", "Simple Math using Pre-determined Integers and Variables", "Simple Math using Input() and Variables"]
 
-game = input("With this in mind, pick a variable from " + red("1") + " to " + red("3\n"))
+for i in remixes:
+  print(red(remixes.index(i) + 1) + " - " + red(i))
+
+game = input("With this in mind, pick a variable from " + red("1") + " to " + red(str(len(remixes)) + "\n"))
 
 if game.isdigit():
-  if game == "1" or game == "2" or game == "3":
+  if int(game) > 0 and int(game) < len(remixes):
     system('clear')
     system('python3 remix' + game + '.py')
   else:
-    print("I don't think", red(game), "is a number from 1-3.")
+    print("I don't think", red(game), "is a number from " + red("1") + " - " + red(str(len(remixes))))
