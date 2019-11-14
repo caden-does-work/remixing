@@ -1,7 +1,7 @@
 from os import system
 from util import red, white
 
-remixes = ["Output using print", "Simple Math using Pre-determined Integers and Variables", "Simple Math using Input() and Variables"]
+remixes = ["Output using print", "Simple Math using Pre-determined Integers and Variables", "Simple Math using Input() and Variables", "Testing"]
 
 for i in remixes:
   print(red(remixes.index(i) + 1) + " - " + red(i))
@@ -13,4 +13,11 @@ if game.isdigit():
     system('clear')
     system('python3 remix' + game + '.py')
   else:
-    print("I don't think", red(game), "is a number from " + red("1") + " - " + red(str(len(remixes) + 1)))
+    print("I don't think", red(game), "is a number from " + red("1") + " - " + red(str(len(remixes))))
+
+    goBack = input(red("Go back?") + "\n")
+
+    system('clear')
+    system('python3 main.py')
+else:
+  print("I do not believe", red(game), "is a number.")
