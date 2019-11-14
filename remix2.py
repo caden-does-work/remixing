@@ -12,6 +12,5 @@ from os import system
 
 go = input("Go back to main file? (Y/N)\n")
 
-if go == "Y":
-  system('clear')
-  system('python3 main.py')
+system('clear')
+system('python3 main.py')

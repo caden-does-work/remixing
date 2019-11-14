@@ -1,4 +1,4 @@
-from util import red, white, cprint
+from util import red, white
 from random import randint
 
 a = randint(1, 100)
@@ -15,6 +15,5 @@ from os import system
 
 go = input("Go back to main file? (Y/N)\n")
 
-if go == "Y":
-  system('clear')
-  system('python3 main.py')
+system('clear')
+system('python3 main.py')
