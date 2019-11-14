@@ -1,4 +1,4 @@
-from util import red, white, cprint
+from util import red
 from random import randint
 
 a = randint(1, 100)

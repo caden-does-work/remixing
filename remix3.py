@@ -6,8 +6,8 @@ y1 = input("Pick another number: ")
 x = int(x1)
 y = int(y1)
 
-answer = None
-print(int(x + y))
+answer = x + y
+print(x, "+", y, "is", answer)
 
 go = input("Go back to main file? (Y/N)\n")
 
